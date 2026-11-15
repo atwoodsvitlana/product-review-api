@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Anna",
+    "product": "Everyday Bra",
+    "rating": 5,
+    "message": "Very comfortable!"
+  },
+  {
+    "id": "2",
+    "name": "Sophie",
+    "product": "Lace Bralette",
+    "rating": 4,
+    "message": "Beautiful design."
+  }
+]
