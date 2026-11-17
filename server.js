@@ -42,7 +42,7 @@ app.get("/api/reviews", async (req, res) => {
 
 app.post("/api/reviews", async (req, res) => {
 
-    const {name, product, rating, message} = req.body;
+    let {name, product, rating, message} = req.body;
 
     if(
         typeof name !== "string" ||
@@ -212,11 +212,11 @@ app.put("/api/reviews/:id", async (req, res) => {
 });
 
 app.delete("/api/reviews/:id", async(req, res) => {
-    const id = req.params.id;
+    let id = req.params.id;
 
     try {
         const reviews = await fs.readFile(filePath, "utf8");
-        const parsedReviews = JSON.parse(reviews);
+        let parsedReviews = JSON.parse(reviews);
 
         const existingReview = parsedReviews.find(item => item.id === id);
 
